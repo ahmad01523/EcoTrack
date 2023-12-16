@@ -8,6 +8,10 @@ const alertSchema = new Schema({
   location: {
     type: String,
   },
+  userID: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
   value: {
     type: Number,
     required: true,
