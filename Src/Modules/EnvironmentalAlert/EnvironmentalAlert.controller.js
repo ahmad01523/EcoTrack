@@ -1,15 +1,16 @@
-import {
-  AirQuality,
-  Temperature,
-  Humidity,
-} from "../../../DB/dataCollection.model.js";
+import { AlertModel } from "../../../DB/Alert.model.js";
 
-export const getTemp = async (req, res) => {
+export const getAlert = async (req, res) => {
   // const {location} = req.body;
 
-  const temp = await Temperature.find().select("value location");
+  const temp = await AlertModel.find().select("value location");
 
-  return res.json({ message: "success", temp });
+  return res.json({ message: "success", alert });
+};
+export const createAlert = async (req, res) => {
+  const { sensorType, location, value } = req.body;
+  const alert = await AlertModel.create({ sensorType, location, value });
+  return res.json({ message: "success", alert });
 };
 
 export const alert = async (req, res) => {

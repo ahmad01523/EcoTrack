@@ -1,5 +1,4 @@
-import {Schema,Types,model} from 'mongoose';
-
+import { Schema, Types, model } from "mongoose";
 
 const AirQualitySchema = new Schema({
   value: {
@@ -17,7 +16,7 @@ const AirQualitySchema = new Schema({
 });
 
 // Temperature Schema
-const TemperatureSchema = new  Schema({
+const TemperatureSchema = new Schema({
   value: {
     type: Number,
     required: true,
@@ -33,7 +32,7 @@ const TemperatureSchema = new  Schema({
 });
 
 // Humidity Schema
-const HumiditySchema = new  Schema({
+const HumiditySchema = new Schema({
   value: {
     type: Number,
     required: true,
@@ -48,17 +47,9 @@ const HumiditySchema = new  Schema({
   },
 });
 
-
-
-
-
 // Create models based on the schemas
-const AirQuality =  model('AirQuality', AirQualitySchema);
-const Temperature =  model('Temperature', TemperatureSchema);
-const Humidity =  model('Humidity', HumiditySchema);
+const AirQuality = model("AirQuality", AirQualitySchema);
+const Temperature = model("Temperature", TemperatureSchema);
+const Humidity = model("Humidity", HumiditySchema);
 
-export {
-  AirQuality,
-  Temperature,
-  Humidity
-};
+export { AirQuality, Temperature, Humidity };
