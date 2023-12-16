@@ -1,12 +1,8 @@
-import express from 'express';
+import express from "express";
 const app = express();
-import * as AuthController from './Auth.controller.js';
+import * as AuthController from "./Auth.controller.js";
 
+app.post("/signup", AuthController.signup);
+app.post("/signin", AuthController.signin);
 
-app.post('/signup', AuthController.signup);
-app.post('/signin', AuthController.signin);
-
-
-export default app; 
-
-
+export default app;
