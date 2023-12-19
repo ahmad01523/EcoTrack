@@ -1,17 +1,19 @@
 import { AlertModel } from "../../../DB/Alert.model.js";
 
 export const getAlerts = async (req, res) => {
-  const alert = await AlertModel.find();
+  const { userID } = req.id;
 
+  const alert = await AlertModel.find({ userID });
+  console.log({ userID });
   return res.json({ message: "success", alert });
 };
 export const createAlert = async (req, res) => {
-  const { sensorType, location, value } = req.body;
-
+  const { sensorType, location, value, thresholdForme } = req.body;
   const alert = await AlertModel.create({
     sensorType,
     location,
     value,
+    thresholdForme,
     userID: req.id,
   });
   return res.json({ message: "success", alert });

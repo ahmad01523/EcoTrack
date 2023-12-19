@@ -2,27 +2,18 @@
 import { Schema, Types, model } from "mongoose";
 
 const alertSchema = new Schema({
-  sensorType: {
-    type: String,
-  },
-  location: {
-    type: String,
-  },
   userID: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  value: {
-    type: Number,
-    required: true,
-  },
-  thresholdForme: {
+  Article: {
     type: String,
     required: true,
   },
+  likes: { type: Number, default: 0 },
   timestamp: { type: Date, default: Date.now },
 });
 
-const AlertModel = model("alertSchema", alertSchema);
+const ArticleModel = model("ArticleSchema", alertSchema);
 
-export { AlertModel };
+export { Article };
