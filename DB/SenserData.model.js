@@ -2,7 +2,7 @@ import { Schema, Types, model } from "mongoose";
 
 const SensorDataSchema = new Schema({
   value: {
-    type: String, // Change the type to String
+    type: Number,
     required: true,
   },
   timestamp: {

@@ -3,6 +3,9 @@ import dataRouter from "./DataCollection/DatacCollection.router.js";
 import authRouter from "./Auth/Auth.router.js";
 import EnvironmentalAlert from "./EnvironmentalAlert/EnvironmentalAlert.router.js";
 import SensorData from "./SensorData/SensorData.router.js";
+// anotherPage.js
+
+import { updateSensorValues } from "./EnvironmentalAlert/AlertSend.js";
 
 //import userProfile from "./UserProfile/UserProfile.router.js";
 
