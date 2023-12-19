@@ -24,6 +24,8 @@ export const updateSensorValues = async () => {
         //////
         console.log(`Alert user ID: ${user.userName}`);
         console.log({ message: "alerts", sensorsForAlert });
+      } else {
+        console.log(`nothing`);
       }
     }
     // console.log({ message: "success", alert });
