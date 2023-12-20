@@ -8,6 +8,6 @@ app.get("/getArticles", Articles.getArticles);
 app.post("/addArticle", auth, Articles.addArticle);
 app.get("/getArticlesID", auth, Articles.getArticlesID);
 
-//app.put("/editArticle", auth, Articles.editArticle);
+app.put("/editArticle", auth, Articles.editArticle);
 
 export default app;
