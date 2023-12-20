@@ -1,7 +1,7 @@
 //alert Schema
 import { Schema, Types, model } from "mongoose";
 
-const alertSchema = new Schema({
+const ArticleSchema = new Schema({
   userID: {
     type: Schema.Types.ObjectId,
     ref: "User",
@@ -14,6 +14,6 @@ const alertSchema = new Schema({
   timestamp: { type: Date, default: Date.now },
 });
 
-const ArticleModel = model("ArticleSchema", alertSchema);
+const ArticleModel = model("ArticleSchema", ArticleSchema);
 
-export { Article };
+export { ArticleModel };

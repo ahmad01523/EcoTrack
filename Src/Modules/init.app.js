@@ -3,6 +3,8 @@ import dataRouter from "./DataCollection/DatacCollection.router.js";
 import authRouter from "./Auth/Auth.router.js";
 import EnvironmentalAlert from "./EnvironmentalAlert/EnvironmentalAlert.router.js";
 import SensorData from "./SensorData/SensorData.router.js";
+import Articles from "./Articles/Articles.router.js";
+
 // anotherPage.js
 
 import { updateSensorValues } from "./EnvironmentalAlert/AlertSend.js";
@@ -16,6 +18,7 @@ const initApp = (app, express) => {
   app.use("/dataCollection", dataRouter);
   app.use("/EnvironmentalAlert", EnvironmentalAlert);
   app.use("/SensorData", SensorData);
+  app.use("/Articles", Articles);
 
   //app.use("/userProfile", userProfile )
   app.use("*", (req, res) => {

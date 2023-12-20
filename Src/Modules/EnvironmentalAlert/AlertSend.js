@@ -33,6 +33,6 @@ export const updateSensorValues = async () => {
     console.error("Error updating sensor values:", error);
   }
 };
-const updateInterval = 10 * 1000; // 5 minutes in milliseconds
+const updateInterval = 5 * 60 * 1000; // 5 minutes in milliseconds
 setInterval(updateSensorValues, updateInterval);
 // Set up an interval to run the update function every 5 minutes (300,000 milliseconds)
