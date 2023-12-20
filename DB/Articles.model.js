@@ -10,6 +10,10 @@ const ArticleSchema = new Schema({
     type: String,
     required: true,
   },
+  ArticleTopic: {
+    type: String,
+    required: true,
+  },
   likes: { type: Number, default: 0 },
   timestamp: { type: Date, default: Date.now },
 });
