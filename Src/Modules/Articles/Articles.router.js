@@ -1,3 +1,4 @@
+//Article router
 import express from "express";
 const app = express();
 import { auth } from "../../Middleware/auth.js";
