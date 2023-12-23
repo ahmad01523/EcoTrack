@@ -1,3 +1,4 @@
+//this is Article
 import { ArticleModel } from "../../../DB/Articles.model.js";
 
 export const addArticle = async (req, res) => {
