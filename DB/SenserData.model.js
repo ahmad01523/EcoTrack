@@ -1,4 +1,5 @@
 import { Schema, Types, model } from "mongoose";
+import SensorTypes from "./sensorTypes.js";
 
 const SensorDataSchema = new Schema({
   value: {
@@ -15,7 +16,7 @@ const SensorDataSchema = new Schema({
   },
   sensorType: {
     type: String, // New field to represent the type of sensor
-    enum: ["AirQuality", "Temperature", "Humidity"], // Enumerated values for sensor types
+    enum: Object.values(SensorTypes),
     required: true,
   },
 });

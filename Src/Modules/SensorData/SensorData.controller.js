@@ -36,3 +36,12 @@ export const updateSensorValue = async (req, res) => {
     return res.status(500).json({ message: "Internal server error" });
   }
 };
+
+export const getSensorData = async (req, res) => {
+  // const {location} = req.body;
+  const { location } = req.params;
+
+  const sensorData = await SensorDataModel.find({ location });
+
+  return res.json({ message: "success", sensorData });
+};

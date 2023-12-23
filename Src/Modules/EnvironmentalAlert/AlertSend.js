@@ -12,11 +12,30 @@ export const updateSensorValues = async () => {
       const [operator, valueStr] = thresholdForme.split(" ");
       const value = parseInt(valueStr, 10);
 
+      let comparisonFunction;
+
+      // Dynamically define the comparison function based on the operator
+      switch (operator) {
+        case ">":
+          comparisonFunction = (a, b) => a > b;
+          break;
+        case ">=":
+          comparisonFunction = (a, b) => a >= b;
+          break;
+        case "<":
+          comparisonFunction = (a, b) => a < b;
+          break;
+        case "<=":
+          comparisonFunction = (a, b) => a <= b;
+          break;
+        default:
+          console.error("Invalid operator");
+      }
       const sensorsForAlert = Sensors.filter(
         (sensor) =>
           sensor.location === alert.location &&
           sensor.sensorType === alert.sensorType &&
-          sensor.value > value
+          comparisonFunction(sensor.value, value)
       );
       if (sensorsForAlert.length > 0) {
         ////// send Email
@@ -24,8 +43,6 @@ export const updateSensorValues = async () => {
         //////
         console.log(`Alert user ID: ${user.userName}`);
         console.log({ message: "alerts", sensorsForAlert });
-      } else {
-        console.log(`nothing`);
       }
     }
     // console.log({ message: "success", alert });
@@ -33,6 +50,6 @@ export const updateSensorValues = async () => {
     console.error("Error updating sensor values:", error);
   }
 };
-const updateInterval = 5 * 60 * 1000; // 5 minutes in milliseconds
+const updateInterval = 60 * 5 * 1000; // 5 minutes in milliseconds
 setInterval(updateSensorValues, updateInterval);
 // Set up an interval to run the update function every 5 minutes (300,000 milliseconds)
