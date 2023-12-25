@@ -12,8 +12,8 @@ const alertSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  value: {
-    type: Number,
+  thresholdForme: {
+    type: String,
     required: true,
   },
   timestamp: { type: Date, default: Date.now },
