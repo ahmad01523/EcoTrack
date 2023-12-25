@@ -5,7 +5,7 @@ import EnvironmentalAlert from "./EnvironmentalAlert/EnvironmentalAlert.router.j
 import reportRouter from "./CommunityReporting/CommunityReporting.router.js";
 
 // anotherPage.js
-//init
+//hello
 
 import { updateSensorValues } from "./EnvironmentalAlert/AlertSend.js";
 
