@@ -6,7 +6,7 @@ import SensorData from "./SensorData/SensorData.router.js";
 import Articles from "./Articles/Articles.router.js";
 
 // anotherPage.js
-//init
+//hello
 
 import { updateSensorValues } from "./EnvironmentalAlert/AlertSend.js";
 
