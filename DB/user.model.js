@@ -28,6 +28,10 @@ const userSchema = new Schema(
       default: "Male",
       enum: ["Male", "Female"],
     },
+    ScoreCounter:{
+      type:Number,
+      default:0
+    }
   },
   {
     timestamps: true,

@@ -9,6 +9,10 @@ export const submitReport = async (req, res) => {
       location,
       user: req.id,
     });
+    if(report){
+      user.ScoreCounter +=1;
+      await user.save();
+    }
     res.json({ message: "reported successfully!", report });
   } catch (err) {
     console.error(err);

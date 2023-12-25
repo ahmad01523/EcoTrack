@@ -4,6 +4,7 @@ import authRouter from "./Auth/Auth.router.js";
 import EnvironmentalAlert from "./EnvironmentalAlert/EnvironmentalAlert.router.js";
 import SensorData from "./SensorData/SensorData.router.js";
 import Articles from "./Articles/Articles.router.js";
+import susScoreRouter  from "./SustainabilityScore/SustainabilityScore.router.js";
 
 // anotherPage.js
 //hello
@@ -20,6 +21,7 @@ const initApp = (app, express) => {
   app.use("/EnvironmentalAlert", EnvironmentalAlert);
   app.use("/SensorData", SensorData);
   app.use("/Articles", Articles);
+  app.use("/susScore", susScoreRouter);
 
   //app.use("/userProfile", userProfile )
   app.use("*", (req, res) => {

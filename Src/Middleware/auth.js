@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken";
-
-export const auth = (req,res,next)=>{
+import jwt, { decode } from "jsonwebtoken";
+import userModel from "../../DB/user.model.js";
+export const auth = async (req,res,next)=>{
     try{
 
         const {authorization} = req.headers;
@@ -19,7 +19,23 @@ export const auth = (req,res,next)=>{
     }
     const decoded = jwt.verify(token, process.env.LOGINTOKEN);
 
-    req.id=decoded.id
+    if (!decoded ||  !decoded.id) {
+        return res
+          .status(400)
+          .json({ message: "Invalid authorization token payload" });
+      }
+
+      const user = await userModel.findById(decoded.id);
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      
+
+      req.user = user;
+      req.id = user._id;
+      req.score = user.ScoreCounter;
+
 
     next();
 
