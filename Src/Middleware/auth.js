@@ -1,10 +1,13 @@
 import jwt, { decode } from "jsonwebtoken";
 import userModel from "../../DB/user.model.js";
+
 export const auth = async (req,res,next)=>{
     try{
-
-        const {authorization} = req.headers;
+        
+        const {authorization} = req.headers
        
+        console.log(authorization)
+
         if(!authorization?.startsWith(process.env.BEARERKEY)){
             return res.json({message:"Invalid authorization"})
         }

@@ -5,7 +5,7 @@ import { auth } from "../../Middleware/auth.js";
 const app = express();
 
 app.post("/submitreport",auth, Reports.submitReport);
-app.get("/getreports", Reports.getReport)
+app.get("/getreports",auth, Reports.getReport)
 
 
 export default app;

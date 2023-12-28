@@ -1,9 +1,17 @@
-import { Schema, Types, model } from "mongoose";
-
-const AirQualitySchema = new Schema({
+import { Schema, model } from "mongoose";
+const types = ["Temperature", "AirQuality", "Humditiy"];
+const dataCollectionSchema = new Schema({
+  datatype: {
+    type: String,
+    enum: types
+  },
   value: {
     type: Number,
     required: true,
+  },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
   },
   timestamp: {
     type: Date,
@@ -15,41 +23,9 @@ const AirQualitySchema = new Schema({
   },
 });
 
-// Temperature Schema
-const TemperatureSchema = new Schema({
-  value: {
-    type: Number,
-    required: true,
-  },
-  timestamp: {
-    type: Date,
-    default: Date.now,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-});
 
-// Humidity Schema
-const HumiditySchema = new Schema({
-  value: {
-    type: Number,
-    required: true,
-  },
-  timestamp: {
-    type: Date,
-    default: Date.now,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-});
+
 
 // Create models based on the schemas
-const AirQuality = model("AirQuality", AirQualitySchema);
-const Temperature = model("Temperature", TemperatureSchema);
-const Humidity = model("Humidity", HumiditySchema);
-
-export { AirQuality, Temperature, Humidity };
+const dataCollection = model("DataCollection", dataCollectionSchema);
+export default dataCollection;

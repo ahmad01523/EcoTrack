@@ -1,11 +1,15 @@
 import { SensorDataModel } from "../../../DB/SenserData.model.js";
 export const createSensorValue = async (req, res) => {
-  // const {location} = req.body;
-  const { value, location, sensorType } = req.body;
+  try{
+    const { value, location, sensorType } = req.body;
 
   const Sensor = await SensorDataModel.create({ value, location, sensorType });
 
   return res.json({ message: "success", Sensor });
+  }catch(err){
+    return res.json({message:"error has occured",err})
+  }
+  
 };
 export const updateSensorValue = async (req, res) => {
   const { value, location, sensorType } = req.body;
