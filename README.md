@@ -80,7 +80,7 @@ Ahmad Darawsheh  - hmod00asad@gmail.com
 Maen Khader  - example@email.com
 Mohammad Khaled  - example@email.com
 
-Project Link: [[https://github.com/your_username/repo_name](https://github.com/ahmad01523/EcoTrack)]
+Project Link: [https://github.com/ahmad01523/EcoTrack]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
