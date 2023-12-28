@@ -13,17 +13,17 @@
 This an api based on NodeJS to help peaple to get enviramantal data and deal with the data and use it and make articles and get points from activities.
 
 Main Features:
--Data Collection
--Authentication 
--Articles
--Data Sensor
--SustainabilityScore
+-Data Collection <br>
+-Authentication <br>
+-Articles <br>
+-Data Sensor <br>
+-SustainabilityScore <br>
 
 Postman API Documentation : https://documenter.getpostman.com/view/27873843/2s9YkuaJpY
 
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -34,7 +34,7 @@ Postman API Documentation : https://documenter.getpostman.com/view/27873843/2s9Y
 ![Node.js](https://cdn.iconscout.com/icon/free/png-512/free-nodejs-226032.png?f=webp&w=256)
 <i class="fa-brands fa-node-js"></i>
   
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -70,7 +70,7 @@ _Below is an example of how you can instruct your audience on installing and set
    npm run dev
    ```   
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -82,7 +82,7 @@ Mohammad Khaled  - mohammad-bashar-01@hotmail.com <br>
 
 Project Link: [https://github.com/ahmad01523/EcoTrack]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
