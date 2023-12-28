@@ -31,8 +31,8 @@ Postman API Documentation : https://documenter.getpostman.com/view/27873843/2s9Y
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![[Node](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)][Node.js]]]
-
+* [![Node][Node.js]][Next-url]
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
