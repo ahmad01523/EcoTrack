@@ -29,7 +29,7 @@ Postman API Documentation : https://documenter.getpostman.com/view/27873843/2s9Y
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
 
 ![Node.js](https://cdn.iconscout.com/icon/free/png-512/free-nodejs-226032.png?f=webp&w=256)
 <i class="fa-brands fa-node-js"></i>
