@@ -76,9 +76,9 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Contact
 
-Ahmad Darawsheh  - hmod00asad@gmail.com
-Maen Khader  - example@email.com
-Mohammad Khaled  - example@email.com
+Ahmad Darawsheh  - hmod00asad@gmail.com <br>
+Maen Khader  - example@email.com <br>
+Mohammad Khaled  - example@email.com <br>
 
 Project Link: [https://github.com/ahmad01523/EcoTrack]
 
