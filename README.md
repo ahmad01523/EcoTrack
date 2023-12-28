@@ -31,7 +31,7 @@ Postman API Documentation : https://documenter.getpostman.com/view/27873843/2s9Y
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-![Node.js](https://imgur.com/p22YIzX)
+![Node.js](https://cdn.iconscout.com/icon/free/png-512/free-nodejs-226032.png?f=webp&w=256)
 <i class="fa-brands fa-node-js"></i>
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
